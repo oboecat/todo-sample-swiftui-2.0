@@ -1,0 +1,6 @@
+framework module SimpleKeychain {
+  umbrella header "SimpleKeychain-macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,34 @@
+PODS:
+  - Auth0 (1.26.0):
+    - JWTDecode
+    - SimpleKeychain
+  - JWTDecode (2.4.1)
+  - SDWebImage (5.8.3):
+    - SDWebImage/Core (= 5.8.3)
+  - SDWebImage/Core (5.8.3)
+  - SDWebImageSwiftUI (1.5.0):
+    - SDWebImage (~> 5.7)
+  - SimpleKeychain (0.11.1)
+
+DEPENDENCIES:
+  - Auth0
+  - SDWebImageSwiftUI
+
+SPEC REPOS:
+  trunk:
+    - Auth0
+    - JWTDecode
+    - SDWebImage
+    - SDWebImageSwiftUI
+    - SimpleKeychain
+
+SPEC CHECKSUMS:
+  Auth0: bb6b64e4927e31ea62583c25bb9d2ed12b7642ee
+  JWTDecode: 4bd4da0cdf0f8154fd467fa48499f34ec057fb88
+  SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
+  SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
+  SimpleKeychain: 0c657949c7afff92337d2ff64052d5eb5c53823e
+
+PODFILE CHECKSUM: 20f9582e8e655e7c46042938897783a1d4dfb0bf
+
+COCOAPODS: 1.9.1

@@ -1,0 +1,6 @@
+framework module SimpleKeychain {
+  umbrella header "SimpleKeychain-tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

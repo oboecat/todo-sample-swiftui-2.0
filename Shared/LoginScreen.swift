@@ -1,0 +1,26 @@
+//
+//  LoginScreen.swift
+//  NewTodoSample
+//
+//  Created by Lila Pustovoyt on 7/2/20.
+//
+
+import SwiftUI
+
+struct LoginScreen: View {
+    var body: some View {
+        VStack() {
+            Spacer()
+            TodoListTitle()
+            Spacer()
+            TestLoginButton()
+            Spacer()
+        }
+    }
+}
+
+struct LoginScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginScreen()
+    }
+}
