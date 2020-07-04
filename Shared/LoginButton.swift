@@ -8,6 +8,19 @@
 import SwiftUI
 import AuthenticationServices
 
+#if targetEnvironment(simulator)
+struct LoginButton: View {
+    @Environment(\.userInteractor) var userInteractor: UserInteractions
+    
+    var body: some View {
+        Button(action: {
+            self.userInteractor.testLogin()
+        }) {
+            Text("Sign In")
+        }
+    }
+}
+#else
 struct LoginButton: View {
     @Environment(\.userInteractor) var userInteractor: UserInteractions
     
@@ -29,18 +42,7 @@ struct LoginButton: View {
         ).frame(width: 200, height: 44, alignment: .center)
     }
 }
-
-struct TestLoginButton: View {
-    @Environment(\.userInteractor) var userInteractor: UserInteractions
-    
-    var body: some View {
-        Button(action: {
-            self.userInteractor.testLogin()
-        }) {
-            Text("Sign In")
-        }
-    }
-}
+#endif
 
 struct LoginButton_Previews: PreviewProvider {
     static var previews: some View {

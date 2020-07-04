@@ -13,7 +13,7 @@ struct LoginScreen: View {
             Spacer()
             TodoListTitle()
             Spacer()
-            TestLoginButton()
+            LoginButton()
             Spacer()
         }
     }
