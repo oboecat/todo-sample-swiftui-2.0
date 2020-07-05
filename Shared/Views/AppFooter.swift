@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct FooterView: View {
+struct AppFooter: View {
     var body: some View {
         HStack {
-            UserView()
+            UserIndicator()
             Spacer()
             LogoutButton()
         }
@@ -19,9 +19,9 @@ struct FooterView: View {
     }
 }
 
-struct FooterView_Previews: PreviewProvider {
+struct AppFooter_Previews: PreviewProvider {
     static var previews: some View {
-        FooterView()
+        AppFooter()
             .environmentObject(AppStore.sample)
     }
 }

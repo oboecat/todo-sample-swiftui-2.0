@@ -36,10 +36,10 @@
 		4B351AC724AAA94A00F09B4D /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AC524AAA94A00F09B4D /* LoginButton.swift */; };
 		4B351ACA24AAAEA800F09B4D /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AC924AAAEA800F09B4D /* LogoutButton.swift */; };
 		4B351ACB24AAAEA800F09B4D /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AC924AAAEA800F09B4D /* LogoutButton.swift */; };
-		4B351ACE24AAAF5500F09B4D /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351ACD24AAAF5500F09B4D /* UserView.swift */; };
-		4B351ACF24AAAF5500F09B4D /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351ACD24AAAF5500F09B4D /* UserView.swift */; };
-		4B351AD224AAAF9500F09B4D /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AD124AAAF9500F09B4D /* FooterView.swift */; };
-		4B351AD324AAAF9500F09B4D /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AD124AAAF9500F09B4D /* FooterView.swift */; };
+		4B351ACE24AAAF5500F09B4D /* UserIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351ACD24AAAF5500F09B4D /* UserIndicator.swift */; };
+		4B351ACF24AAAF5500F09B4D /* UserIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351ACD24AAAF5500F09B4D /* UserIndicator.swift */; };
+		4B351AD224AAAF9500F09B4D /* AppFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AD124AAAF9500F09B4D /* AppFooter.swift */; };
+		4B351AD324AAAF9500F09B4D /* AppFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AD124AAAF9500F09B4D /* AppFooter.swift */; };
 		4B5FDDAC24AFF50200EEECBA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AAD24AAA68900F09B4D /* APIClient.swift */; };
 		4B5FDDAD24AFF50F00EEECBA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AA924AAA66A00F09B4D /* Endpoint.swift */; };
 		4B5FDDAF24B0129400EEECBA /* TodoStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5FDDAE24B0129400EEECBA /* TodoStatus.swift */; };
@@ -81,9 +81,9 @@
 		4BF025EA24AFF07600143CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCFCA4124A4247C009812DF /* Assets.xcassets */; };
 		4BF025EB24AFF07600143CDE /* TodoListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF025C424AFD2C600143CDE /* TodoListScreen.swift */; };
 		4BF025EC24AFF07600143CDE /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF025AE24AAB34300143CDE /* Auth0.plist */; };
-		4BF025ED24AFF07600143CDE /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AD124AAAF9500F09B4D /* FooterView.swift */; };
+		4BF025ED24AFF07600143CDE /* AppFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AD124AAAF9500F09B4D /* AppFooter.swift */; };
 		4BF025EE24AFF07600143CDE /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351ABD24AAA88300F09B4D /* TodoItem.swift */; };
-		4BF025EF24AFF07600143CDE /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351ACD24AAAF5500F09B4D /* UserView.swift */; };
+		4BF025EF24AFF07600143CDE /* UserIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351ACD24AAAF5500F09B4D /* UserIndicator.swift */; };
 		4BF025F024AFF07600143CDE /* NewTodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B351AC124AAA8F600F09B4D /* NewTodoItem.swift */; };
 		52BD6BE013A69C71E71BD522 /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3622EBA5DF3FCA9E9389CDEE /* Pods_iOS.framework */; };
 		EFC418ECA39FB4DBC1A4DC3A /* Pods_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B17581616300C2825A633A6 /* Pods_tvOS.framework */; };
@@ -107,8 +107,8 @@
 		4B351AC124AAA8F600F09B4D /* NewTodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoItem.swift; sourceTree = "<group>"; };
 		4B351AC524AAA94A00F09B4D /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		4B351AC924AAAEA800F09B4D /* LogoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
-		4B351ACD24AAAF5500F09B4D /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		4B351AD124AAAF9500F09B4D /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		4B351ACD24AAAF5500F09B4D /* UserIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIndicator.swift; sourceTree = "<group>"; };
+		4B351AD124AAAF9500F09B4D /* AppFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFooter.swift; sourceTree = "<group>"; };
 		4B5FDDAB24AFF2E500EEECBA /* tvOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tvOS.entitlements; sourceTree = "<group>"; };
 		4B5FDDAE24B0129400EEECBA /* TodoStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStatus.swift; sourceTree = "<group>"; };
 		4BCFCA3F24A42479009812DF /* NewTodoSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoSampleApp.swift; sourceTree = "<group>"; };
@@ -194,6 +194,27 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		4B5FDDB224B0195600EEECBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B351A9B24AAA3E900F09B4D /* TodoAppView.swift */,
+				4B351AB124AAA7AD00F09B4D /* Router.swift */,
+				4B351AB524AAA7F200F09B4D /* TodoListTitle.swift */,
+				4B351AB924AAA80D00F09B4D /* TodoList.swift */,
+				4BF025C424AFD2C600143CDE /* TodoListScreen.swift */,
+				4B351ABD24AAA88300F09B4D /* TodoItem.swift */,
+				4B351AC124AAA8F600F09B4D /* NewTodoItem.swift */,
+				4B5FDDAE24B0129400EEECBA /* TodoStatus.swift */,
+				4BF025C024AEADA200143CDE /* LoadingScreen.swift */,
+				4B351AC524AAA94A00F09B4D /* LoginButton.swift */,
+				4B351AC924AAAEA800F09B4D /* LogoutButton.swift */,
+				4BF025BC24AEA7AE00143CDE /* LoginScreen.swift */,
+				4B351ACD24AAAF5500F09B4D /* UserIndicator.swift */,
+				4B351AD124AAAF9500F09B4D /* AppFooter.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4BCFCA3924A42479009812DF = {
 			isa = PBXGroup;
 			children = (
@@ -214,20 +235,7 @@
 				4B351A9224AAA05500F09B4D /* Models */,
 				4B351A9F24AAA40A00F09B4D /* Interactors */,
 				4B351AA824AAA65300F09B4D /* Utils */,
-				4B351A9B24AAA3E900F09B4D /* TodoAppView.swift */,
-				4B351AB124AAA7AD00F09B4D /* Router.swift */,
-				4B351AB524AAA7F200F09B4D /* TodoListTitle.swift */,
-				4B351AB924AAA80D00F09B4D /* TodoList.swift */,
-				4BF025C424AFD2C600143CDE /* TodoListScreen.swift */,
-				4B351ABD24AAA88300F09B4D /* TodoItem.swift */,
-				4B351AC124AAA8F600F09B4D /* NewTodoItem.swift */,
-				4B5FDDAE24B0129400EEECBA /* TodoStatus.swift */,
-				4BF025C024AEADA200143CDE /* LoadingScreen.swift */,
-				4BF025BC24AEA7AE00143CDE /* LoginScreen.swift */,
-				4B351AC524AAA94A00F09B4D /* LoginButton.swift */,
-				4B351AC924AAAEA800F09B4D /* LogoutButton.swift */,
-				4B351ACD24AAAF5500F09B4D /* UserView.swift */,
-				4B351AD124AAAF9500F09B4D /* FooterView.swift */,
+				4B5FDDB224B0195600EEECBA /* Views */,
 				4BCFCA4124A4247C009812DF /* Assets.xcassets */,
 				4BF025AE24AAB34300143CDE /* Auth0.plist */,
 			);
@@ -564,7 +572,7 @@
 				4B351A9424AAA07700F09B4D /* AppStore.swift in Sources */,
 				4B351ACA24AAAEA800F09B4D /* LogoutButton.swift in Sources */,
 				4B351AA524AAA62E00F09B4D /* UserInteractor.swift in Sources */,
-				4B351ACE24AAAF5500F09B4D /* UserView.swift in Sources */,
+				4B351ACE24AAAF5500F09B4D /* UserIndicator.swift in Sources */,
 				4BF025B924ABF18900143CDE /* AppEnvironment.swift in Sources */,
 				4B351AB224AAA7AD00F09B4D /* Router.swift in Sources */,
 				4B5FDDAF24B0129400EEECBA /* TodoStatus.swift in Sources */,
@@ -583,7 +591,7 @@
 				4B351A9824AAA20700F09B4D /* Todo.swift in Sources */,
 				4B351ABE24AAA88300F09B4D /* TodoItem.swift in Sources */,
 				4B351AAE24AAA68900F09B4D /* APIClient.swift in Sources */,
-				4B351AD224AAAF9500F09B4D /* FooterView.swift in Sources */,
+				4B351AD224AAAF9500F09B4D /* AppFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,7 +602,7 @@
 				4B351A9524AAA07700F09B4D /* AppStore.swift in Sources */,
 				4B351ACB24AAAEA800F09B4D /* LogoutButton.swift in Sources */,
 				4B351AA624AAA62E00F09B4D /* UserInteractor.swift in Sources */,
-				4B351ACF24AAAF5500F09B4D /* UserView.swift in Sources */,
+				4B351ACF24AAAF5500F09B4D /* UserIndicator.swift in Sources */,
 				4BF025BA24ABF18900143CDE /* AppEnvironment.swift in Sources */,
 				4B351AB324AAA7AD00F09B4D /* Router.swift in Sources */,
 				4B5FDDB024B0129400EEECBA /* TodoStatus.swift in Sources */,
@@ -613,7 +621,7 @@
 				4B351A9924AAA20700F09B4D /* Todo.swift in Sources */,
 				4B351ABF24AAA88300F09B4D /* TodoItem.swift in Sources */,
 				4B351AAF24AAA68900F09B4D /* APIClient.swift in Sources */,
-				4B351AD324AAAF9500F09B4D /* FooterView.swift in Sources */,
+				4B351AD324AAAF9500F09B4D /* AppFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,7 +632,7 @@
 				4BF025DB24AFF06400143CDE /* NewTodoSampleApp.swift in Sources */,
 				4BF025EB24AFF07600143CDE /* TodoListScreen.swift in Sources */,
 				4BF025E424AFF07600143CDE /* LogoutButton.swift in Sources */,
-				4BF025EF24AFF07600143CDE /* UserView.swift in Sources */,
+				4BF025EF24AFF07600143CDE /* UserIndicator.swift in Sources */,
 				4BF025E024AFF06F00143CDE /* UserInteractor.swift in Sources */,
 				4BF025E624AFF07600143CDE /* TodoList.swift in Sources */,
 				4B5FDDB124B0129400EEECBA /* TodoStatus.swift in Sources */,
@@ -643,7 +651,7 @@
 				4BF025DE24AFF06900143CDE /* Todo.swift in Sources */,
 				4BF025E724AFF07600143CDE /* LoginButton.swift in Sources */,
 				4B5FDDAD24AFF50F00EEECBA /* Endpoint.swift in Sources */,
-				4BF025ED24AFF07600143CDE /* FooterView.swift in Sources */,
+				4BF025ED24AFF07600143CDE /* AppFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

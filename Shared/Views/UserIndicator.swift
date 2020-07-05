@@ -1,5 +1,5 @@
 //
-//  UserView.swift
+//  UserIndicator.swift
 //  NewTodoSample
 //
 //  Created by Lila Pustovoyt on 6/29/20.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct UserView: View {
+struct UserIndicator: View {
     @EnvironmentObject var store: AppStore
     
     var body: some View {
@@ -30,9 +30,9 @@ struct UserView: View {
     }
 }
 
-struct UserView_Previews: PreviewProvider {
+struct UserIndicator_Previews: PreviewProvider {
     static var previews: some View {
-        UserView()
+        UserIndicator()
             .environmentObject(AppStore())
     }
 }

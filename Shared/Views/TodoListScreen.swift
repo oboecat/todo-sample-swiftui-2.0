@@ -20,37 +20,11 @@ struct TodoListScreen: View {
             .sink { _ in self.interactor.getTodos() }
     }
     
-    #if !os(tvOS)
     var body: some View {
         VStack(alignment: .center) {
             TodoListTitle()
             
-            Picker("View", selection: $isShowingCompleted) {
-                Text("Pending").tag(false)
-                Text("All").tag(true)
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            .frame(width: 200, height: nil)
-            
-            TodoList(isShowingCompleted: isShowingCompleted)
-            
-            FooterView()
-        }
-        .onAppear {
-            self.interactor.getTodos()
-            self.poll()
-        }
-        .onDisappear {
-            self.cancellable.cancel()
-        }
-    }
-    #endif
-    
-    #if os(tvOS)
-    var body: some View {
-        VStack(alignment: .center) {
-            TodoListTitle()
-            
+            #if os(tvOS)
             HStack {
                 Picker("View", selection: $isShowingCompleted) {
                     Text("Pending").tag(false)
@@ -61,15 +35,18 @@ struct TodoListScreen: View {
                 
                 Spacer()
             }
+            #else
+            Picker("View", selection: $isShowingCompleted) {
+                Text("Pending").tag(false)
+                Text("All").tag(true)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .frame(width: 200, height: nil)
+            #endif
             
             TodoList(isShowingCompleted: isShowingCompleted)
             
-            HStack {
-                UserView()
-                    .frame(maxWidth: 640, alignment: .leading)
-                Spacer()
-                LogoutButton()
-            }
+            AppFooter()
         }
         .onAppear {
             self.interactor.getTodos()
@@ -79,7 +56,6 @@ struct TodoListScreen: View {
             self.cancellable.cancel()
         }
     }
-    #endif
 }
 
 struct TodoListScreen_Previews: PreviewProvider {
