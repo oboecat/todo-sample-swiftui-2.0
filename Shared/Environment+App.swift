@@ -28,3 +28,13 @@ extension EnvironmentValues {
         set { self[UserInteractionsKey.self] = newValue }
     }
 }
+
+#if os(macOS)
+// hides the TextField focus ring
+extension NSTextField {
+    open override var focusRingType: NSFocusRingType {
+        get { .none }
+        set { }
+    }
+}
+#endif

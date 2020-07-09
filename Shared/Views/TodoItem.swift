@@ -12,7 +12,7 @@ struct TodoItem: View {
     @State var bodyDraft: String = ""
     @State var isMarkedCompleted = false
     var todo: Todo
-    
+     
     var body: some View {
         #if os(tvOS)
         return todoItem.onPlayPauseCommand(perform: self.toggleCompleted)
@@ -29,6 +29,7 @@ struct TodoItem: View {
             Button(action: self.toggleCompleted) {
                 TodoStatus(isCompleted: self.isMarkedCompleted)
             }
+            .buttonStyle(BorderlessButtonStyle())
             #endif
 
             TextField("To-do", text: $bodyDraft, onEditingChanged: { editing in
@@ -38,7 +39,7 @@ struct TodoItem: View {
                 self.interactor.updateTodo(updatedTodo)
             })
             .textFieldStyle(PlainTextFieldStyle())
-
+            
             Spacer()
         }
         .onAppear {

@@ -14,8 +14,9 @@ struct LogoutButton: View {
         Button(action: {
             self.userInteractor.logout()
         }) {
-            Text(Image(systemName: "chevron.left.square")) + Text(" Sign out")
+            Text(" Sign out")
         }
+        .accentColor(.red)
     }
 }
 

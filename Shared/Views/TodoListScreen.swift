@@ -10,7 +10,6 @@ import Combine
 
 struct TodoListScreen: View {
     @Environment(\.todosInteractor) var interactor: TodoInteractions
-    @EnvironmentObject var store: AppStore
     @State private var isShowingCompleted = true
     @State private var cancellable: AnyCancellable! = nil
     
@@ -36,7 +35,7 @@ struct TodoListScreen: View {
                 Spacer()
             }
             #else
-            Picker("View", selection: $isShowingCompleted) {
+            Picker("", selection: $isShowingCompleted) {
                 Text("Pending").tag(false)
                 Text("All").tag(true)
             }

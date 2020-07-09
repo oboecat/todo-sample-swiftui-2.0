@@ -9,6 +9,7 @@ import SwiftUI
 import AuthenticationServices
 
 #if targetEnvironment(simulator)
+// Currently Sign in with Apple doesn't work on simulators
 struct LoginButton: View {
     @Environment(\.userInteractor) var userInteractor: UserInteractions
     

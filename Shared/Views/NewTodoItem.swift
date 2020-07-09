@@ -30,6 +30,7 @@ struct NewTodoItem: View {
             }) {
                 TodoStatus(isCompleted: self.isMarkedCompleted)
             }
+            .buttonStyle(BorderlessButtonStyle())
             #endif
 
             TextField("New to-do", text: $bodyDraft, onCommit: {

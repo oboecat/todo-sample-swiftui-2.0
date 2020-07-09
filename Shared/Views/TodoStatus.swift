@@ -11,13 +11,8 @@ struct TodoStatus: View {
     var isCompleted: Bool
     
     var body: some View {
-        if isCompleted {
-            return Image(systemName: "largecircle.fill.circle")
-                .foregroundColor(.accentColor)
-        } else {
-            return Image(systemName: "circle")
-                .foregroundColor(.gray)
-        }
+        Image(systemName: isCompleted ? "largecircle.fill.circle" : "circle")
+            .foregroundColor(isCompleted ? .accentColor : .gray)
     }
 }
 
