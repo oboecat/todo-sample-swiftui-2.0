@@ -1,6 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-iOS/Pods-iOS-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Auth0-iOS/Auth0.framework
-${BUILT_PRODUCTS_DIR}/JWTDecode-iOS/JWTDecode.framework
-${BUILT_PRODUCTS_DIR}/SDWebImage-iOS/SDWebImage.framework
-${BUILT_PRODUCTS_DIR}/SDWebImageSwiftUI-iOS/SDWebImageSwiftUI.framework
-${BUILT_PRODUCTS_DIR}/SimpleKeychain-iOS/SimpleKeychain.framework
