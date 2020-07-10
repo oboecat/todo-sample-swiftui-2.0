@@ -10,9 +10,9 @@ import SwiftUI
 struct TodoItem: View {
     @Environment(\.todosInteractor) var interactor: TodoInteractions
     @State var bodyDraft: String = ""
-    @State var isMarkedCompleted = false
+    @State var isMarkedCompleted: Bool = false
     var todo: Todo
-     
+    
     var body: some View {
         #if os(tvOS)
         return todoItem.onPlayPauseCommand(perform: self.toggleCompleted)
@@ -43,8 +43,8 @@ struct TodoItem: View {
             Spacer()
         }
         .onAppear {
-            self.isMarkedCompleted = self.todo.completed
-            self.bodyDraft = self.todo.body
+            self.bodyDraft = todo.body
+            self.isMarkedCompleted = todo.completed
         }
     }
     
@@ -58,7 +58,7 @@ struct TodoItem: View {
 
 struct TodoItem_Previews: PreviewProvider {
     static var previews: some View {
-        TodoItem(todo: Todo(body: "Buy new cat toy", completed: true, id: "test"))
+        TodoItem(todo: Todo(body: "Water plants", completed: true, id: "test"))
+            .padding()
     }
 }
-

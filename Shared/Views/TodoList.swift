@@ -11,20 +11,24 @@ import Combine
 struct TodoList: View {
     @EnvironmentObject var store: AppStore
     var isShowingCompleted: Bool
+    
     var filteredList: [Todo] {
-            store.todos.filter { self.isShowingCompleted || !$0.completed }
+        store.todos.filter { self.isShowingCompleted || !$0.completed }
     }
     
     var body: some View {
         #if os(macOS)
         return ScrollView(showsIndicators: false) {
             Divider()
+            
             ForEach(filteredList) { todo in
                 TodoItem(todo: todo)
                 Divider()
             }
             .padding(.horizontal)
-            NewTodoItem().padding(.horizontal)
+            
+            NewTodoItem()
+                .padding(.horizontal)
         }
         .padding(.vertical)
         .animation(.default)
@@ -37,12 +41,6 @@ struct TodoList: View {
         }
         .animation(.default)
         #endif
-    }
-    
-    var listItems: some View {
-        return Group {
-            
-        }
     }
 }
 

@@ -17,6 +17,6 @@ struct TodoListTitle: View {
 
 struct TodoListTitle_Previews: PreviewProvider {
     static var previews: some View {
-        TodoListTitle()
+        TodoListTitle().padding()
     }
 }

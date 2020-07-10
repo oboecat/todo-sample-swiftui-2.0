@@ -13,12 +13,6 @@ struct TodoListScreen: View {
     @State private var isShowingCompleted = true
     @State private var cancellable: AnyCancellable! = nil
     
-    func poll() {
-        self.cancellable = Timer.publish(every: 3, on: RunLoop.main, in: .common)
-            .autoconnect()
-            .sink { _ in self.interactor.getTodos() }
-    }
-    
     var body: some View {
         VStack(alignment: .center) {
             TodoListTitle()
@@ -54,6 +48,12 @@ struct TodoListScreen: View {
         .onDisappear {
             self.cancellable.cancel()
         }
+    }
+    
+    private func poll() {
+        self.cancellable = Timer.publish(every: 3, on: RunLoop.main, in: .common)
+            .autoconnect()
+            .sink { _ in self.interactor.getTodos() }
     }
 }
 

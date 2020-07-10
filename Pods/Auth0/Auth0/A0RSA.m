@@ -22,6 +22,7 @@
 
 #import <A0RSA.h>
 #import <CommonCrypto/CommonCrypto.h>
+#import <Security/SecKey.h>
 
 @interface A0RSA ()
 @property (readonly, nonatomic) SecKeyRef key;
@@ -41,31 +42,35 @@
     size_t signedHashBytesSize = SecKeyGetBlockSize(self.key);
     uint8_t signedHashBytes[signedHashBytesSize];
     memset(signedHashBytes, 0x0, signedHashBytesSize);
-
-    OSStatus result = SecKeyRawSign(self.key,
-                                    kSecPaddingPKCS1SHA256,
-                                    plainData.bytes,
-                                    plainData.length,
-                                    signedHashBytes,
-                                    &signedHashBytesSize);
-
-    NSData* signedHash = nil;
-    if (result == errSecSuccess) {
-        signedHash = [NSData dataWithBytes:signedHashBytes
-                                    length:(NSUInteger)signedHashBytesSize];
-    }
-
-    return signedHash;
+    
+//    OSStatus result = SecKeyRawSign(self.key,
+//                                    kSecPaddingPKCS1SHA256,
+//                                    plainData.bytes,
+//                                    plainData.length,
+//                                    signedHashBytes,
+//                                    &signedHashBytesSize);
+//
+//    NSData* signedHash = nil;
+//    if (result == errSecSuccess) {
+//        signedHash = [NSData dataWithBytes:signedHashBytes
+//                                    length:(NSUInteger)signedHashBytesSize];
+//    }
+//
+//    return signedHash;
+    
+    return nil;
 }
 
 - (Boolean)verify:(NSData *)plainData signature:(NSData *)signature {
-    OSStatus result = SecKeyRawVerify(self.key,
-                                      kSecPaddingPKCS1SHA256,
-                                      plainData.bytes,
-                                      plainData.length,
-                                      signature.bytes,
-                                      signature.length);
-    return result == errSecSuccess;
+//    OSStatus result = SecKeyRawVerify(self.key,
+//                                      kSecPaddingPKCS1SHA256,
+//                                      plainData.bytes,
+//                                      plainData.length,
+//                                      signature.bytes,
+//                                      signature.length);
+//    return result == errSecSuccess;
+    
+    return false;
 }
 
 @end

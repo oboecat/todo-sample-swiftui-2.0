@@ -13,6 +13,7 @@ struct TodoStatus: View {
     var body: some View {
         Image(systemName: isCompleted ? "largecircle.fill.circle" : "circle")
             .foregroundColor(isCompleted ? .accentColor : .gray)
+            .contentShape(Rectangle())
     }
 }
 

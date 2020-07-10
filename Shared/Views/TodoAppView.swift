@@ -10,7 +10,12 @@ import Auth0
 
 struct TodoAppView: View {
     var body: some View {
-        Router()
+        #if os(macOS)
+        return Router()
+            .frame(width: 360, height: 480, alignment: .center)
+        #else
+        return Router()
+        #endif
     }
 }
 

@@ -22,5 +22,6 @@ struct LoginScreen: View {
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
         LoginScreen()
+            .frame(width: 480, height: 360, alignment: .center)
     }
 }
