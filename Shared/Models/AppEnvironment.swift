@@ -17,10 +17,11 @@ class AppEnvironment: ObservableObject {
         let store = AppStore()
         let authentication = Auth0.authentication()
         let credsManager = CredentialsManager(authentication: authentication)
-        let apiClient = APIClient(credsManager: credsManager)
+        let auth0Helper = Auth0Helper(credManager: credsManager)
+        let apiClient = APIClient(auth0Helper: auth0Helper)
         
         self.store = store
         self.todoInteractor = TodoInteractor(store: store, apiClient: apiClient)
-        self.userInteractor = UserInteractor(store: store, credsManager: credsManager)
+        self.userInteractor = UserInteractor(store: store, auth0Helper: auth0Helper, credsManager: credsManager)
     }
 }

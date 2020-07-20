@@ -6,7 +6,7 @@ target 'iOS' do
   use_frameworks!
 
   # Pods for iOS
-  pod 'Auth0'
+  pod 'Auth0', :git => 'https://github.com/auth0/Auth0.swift.git', :branch => 'fix/macos-11'
   pod 'SDWebImageSwiftUI'
 end
 
@@ -15,7 +15,7 @@ target 'macOS' do
   use_frameworks!
 
   # Pods for macOS
-  pod 'Auth0'
+  pod 'Auth0', :git => 'https://github.com/auth0/Auth0.swift.git', :branch => 'fix/macos-11'
   pod 'SDWebImageSwiftUI'
 
 end
@@ -25,7 +25,7 @@ target 'tvOS' do
   use_frameworks!
 
   # Pods for tvOS
-  pod 'Auth0'
+  pod 'Auth0', :git => 'https://github.com/auth0/Auth0.swift.git', :branch => 'fix/macos-11'
   pod 'SDWebImageSwiftUI'
 
 end

@@ -22,6 +22,11 @@ struct Router: View {
                 TodoListScreen()
             }
         }
+        .alert(item: $store.error) { log in
+            Alert(title: Text("Error"),
+                  message: Text("An error occurred: \(log.error.localizedDescription)"),
+                  dismissButton: Alert.Button.cancel(Text("Ok")))
+        }
         .onAppear {
             self.userInteractor.checkSession()
         }

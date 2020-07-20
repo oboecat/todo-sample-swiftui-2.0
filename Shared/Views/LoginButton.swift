@@ -34,7 +34,7 @@ struct LoginButton: View {
             onCompletion: { result in
                 switch result {
                 case .success(let authResults):
-                    let appleIDCredential = authResults.credential as! ASAuthorizationAppleIDCredential
+                    let appleIDCredential = authResults.credential as? ASAuthorizationAppleIDCredential
                     self.userInteractor.loginApple(appleIDCredential)
                 case .failure(let error):
                     print("Authorization failed: " + error.localizedDescription)

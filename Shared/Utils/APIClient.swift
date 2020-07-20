@@ -13,9 +13,9 @@ struct APIClient {
     typealias Headers = [String: String]
     
     let base = URL(string: "http://lilas-macbook-pro.local:3000/")!
-    var credsManager: Auth0.CredentialsManager
+    var auth0Helper: Auth0Helper
     
-    func getTodos() -> AnyPublisher<[Todo], Never> {
+    func getTodos() -> AnyPublisher<[Todo], Error> {
         fetchWithAuth { headers in
             Endpoint<[Todo]>(
                 method: .get,
@@ -25,7 +25,7 @@ struct APIClient {
         }
     }
     
-    func addNewTodo(_ todo: Todo) -> AnyPublisher<Todo, Never> {
+    func addNewTodo(_ todo: Todo) -> AnyPublisher<Todo, Error> {
         fetchWithAuth { headers in
             Endpoint<Todo>(
                 method: .post,
@@ -36,7 +36,7 @@ struct APIClient {
         }
     }
     
-    func updateTodo(_ todo: Todo) -> AnyPublisher<Todo, Never> {
+    func updateTodo(_ todo: Todo) -> AnyPublisher<Todo, Error> {
         fetchWithAuth { headers in
             Endpoint<Todo>(
                 method: .patch,
@@ -47,7 +47,7 @@ struct APIClient {
         }
     }
     
-    func deleteTodo(_ todo: Todo) -> AnyPublisher<Todo, Never> {
+    func deleteTodo(_ todo: Todo) -> AnyPublisher<Todo, Error> {
         fetchWithAuth { headers in
             Endpoint<Todo>(
                 method: .delete,
@@ -58,8 +58,8 @@ struct APIClient {
     }
     
     
-    private func fetchWithAuth<T>(endpoint: @escaping (Headers) -> Endpoint<T>) -> AnyPublisher<T, Never> {
-        getCredentials()
+    private func fetchWithAuth<T>(endpoint: @escaping (Headers) -> Endpoint<T>) -> AnyPublisher<T, Error> {
+        auth0Helper.credentials()
             .map { credentials in
                 ["Authorization": "Bearer \(credentials.accessToken!)"]
             }
@@ -68,18 +68,5 @@ struct APIClient {
             }
             .flatMap { $0.fetch() }
             .eraseToAnyPublisher()
-    }
-    
-    private func getCredentials() -> AnyPublisher<Credentials, Never> {
-        return Future<Credentials, Error> { promise in
-            self.credsManager.credentials { err, creds in
-                guard err == nil, let credentials = creds else {
-                    return promise(.failure(err!))
-                }
-                return promise(.success(credentials))
-            }
-        }
-        .assertNoFailure()
-        .eraseToAnyPublisher()
     }
 }

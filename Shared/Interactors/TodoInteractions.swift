@@ -31,6 +31,9 @@ class TodoInteractor: TodoInteractions {
     func getTodos() {
         api.getTodos()
             .receive(on: RunLoop.main)
+            .catch { err in
+                self.handleError(err)
+            }
             .assign(to: \.todos, on: store)
             .store(in: &cancelBag)
     }
@@ -38,6 +41,9 @@ class TodoInteractor: TodoInteractions {
     func updateTodo(_ todo: Todo) {
         api.updateTodo(todo)
             .receive(on: RunLoop.main)
+            .catch { err in
+                self.handleError(err)
+            }
             .sink { todo in
                 if let index = self.store.todos.firstIndex(where: { $0.id == todo.id }) {
                     self.store.todos[index] = todo
@@ -49,6 +55,9 @@ class TodoInteractor: TodoInteractions {
     func addNewTodo(_ todo: Todo) {
         api.addNewTodo(todo)
             .receive(on: RunLoop.main)
+            .catch { err in
+                self.handleError(err)
+            }
             .sink { todo in
                 self.store.todos.append(todo)
             }
@@ -58,6 +67,12 @@ class TodoInteractor: TodoInteractions {
     func deleteTodo(_ todoId: String) {
         // to-do
     }
+    
+    private func handleError<Output>(_ err: Error) -> AnyPublisher<Output, Never> {
+        store.error = ErrorLog(error: err)
+        return Empty().eraseToAnyPublisher()
+    }
+
 }
 
 struct MockTodoInteractor: TodoInteractions {

@@ -61,11 +61,10 @@ struct Endpoint<ResponseType> where ResponseType: Decodable {
         return endpointWithAuth
     }
     
-    func fetch() -> AnyPublisher<ResponseType, Never> {
+    func fetch() -> AnyPublisher<ResponseType, Error> {
         URLSession.shared.dataTaskPublisher(for: request)
             .map { $0.data }
             .decode(type: ResponseType.self, decoder: JSONDecoder())
-            .assertNoFailure()
             .eraseToAnyPublisher()
     }
 }

@@ -11,16 +11,25 @@ PODS:
   - SimpleKeychain (0.11.1)
 
 DEPENDENCIES:
-  - Auth0
+  - Auth0 (from `https://github.com/auth0/Auth0.swift.git`, branch `fix/macos-11`)
   - SDWebImageSwiftUI
 
 SPEC REPOS:
   trunk:
-    - Auth0
     - JWTDecode
     - SDWebImage
     - SDWebImageSwiftUI
     - SimpleKeychain
+
+EXTERNAL SOURCES:
+  Auth0:
+    :branch: fix/macos-11
+    :git: https://github.com/auth0/Auth0.swift.git
+
+CHECKOUT OPTIONS:
+  Auth0:
+    :commit: d275623139b2b0e33143b6843d6462b0e44f87c5
+    :git: https://github.com/auth0/Auth0.swift.git
 
 SPEC CHECKSUMS:
   Auth0: bb6b64e4927e31ea62583c25bb9d2ed12b7642ee
@@ -29,6 +38,6 @@ SPEC CHECKSUMS:
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
   SimpleKeychain: 0c657949c7afff92337d2ff64052d5eb5c53823e
 
-PODFILE CHECKSUM: 20f9582e8e655e7c46042938897783a1d4dfb0bf
+PODFILE CHECKSUM: af49ebed549c7a025e207dddcf60bd1df8640615
 
 COCOAPODS: 1.9.1
